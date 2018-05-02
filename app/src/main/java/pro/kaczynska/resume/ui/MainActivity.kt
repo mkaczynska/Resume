@@ -1,22 +1,28 @@
-package pro.kaczynska.resume
+package pro.kaczynska.resume.ui
 
-import android.content.Intent
-import android.net.Uri
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
-import android.content.pm.PackageManager
 import android.content.ActivityNotFoundException
-import android.content.Intent.ACTION_VIEW
-import android.util.Log
 import android.content.ComponentName
+import android.content.Intent
+import android.content.Intent.ACTION_VIEW
+import android.content.pm.PackageManager
+import android.databinding.DataBindingUtil
+import android.net.Uri
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.widget.Button
+import pro.kaczynska.resume.R
+import pro.kaczynska.resume.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
 
         val workHistoryButton = findViewById<Button>(R.id.workHistory)
         workHistoryButton.setOnClickListener {
@@ -26,14 +32,14 @@ class MainActivity : AppCompatActivity() {
 
         val callButton = findViewById<Button>(R.id.call)
         callButton.setOnClickListener {
-            val callUri = Uri.parse(getString(R.string.resume_phone_number))
+            val callUri = Uri.parse(getString(R.string.phoneNumber))
             val callIntent = Intent(Intent.ACTION_DIAL, callUri)
             startActivity(callIntent)
         }
 
         val emailButton = findViewById<Button>(R.id.sendEmail)
         emailButton.setOnClickListener {
-            composeEmail(arrayOf(getString(R.string.email_address)),
+            composeEmail(arrayOf(getString(R.string.emailAddress)),
                     getString(R.string.email_title),
                     getString(R.string.email_header) + getString(R.string.email_footer))
         }
@@ -46,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         val skypeButton = findViewById<Button>(R.id.skype)
         skypeButton.setOnClickListener {
-            openSkype(getString(R.string.skype_name))
+            openSkype(getString(R.string.skypeName))
         }
 
         val whatsappButton = findViewById<Button>(R.id.whatsapp)

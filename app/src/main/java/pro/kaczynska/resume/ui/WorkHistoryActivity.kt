@@ -1,7 +1,8 @@
-package pro.kaczynska.resume
+package pro.kaczynska.resume.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import pro.kaczynska.resume.R
 
 class WorkHistoryActivity : AppCompatActivity() {
 

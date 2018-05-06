@@ -4,12 +4,8 @@
     <data>
 
         <variable
-            name="candidate"
-            type="pro.kaczynska.resume.model.Candidate" />
-
-        <variable
-            name="profile"
-            type="pro.kaczynska.resume.model.Profile" />
+            name="viewModel"
+            type="pro.kaczynska.resume.viewmodel.CandidateProfileViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -25,24 +21,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@{candidate.fullName}"
+            android:text="@{viewModel.candidate.fullName}"
             android:textSize="@dimen/name_text_size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/workHistory"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.workHistoryText}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -55,14 +40,27 @@
             app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:srcCompat="@{candidate.photo}" />
+            app:srcCompat="@{viewModel.candidate.photo}" />
+
+        <Button
+            android:id="@+id/workHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:onClick="@{viewModel::onWorkHistoryClicked}"
+            android:text="@{viewModel.profile.workHistoryText}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <Button
             android:id="@+id/call"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.callNumberText}"
+            android:onClick="@{viewModel::onCallNumberClicked}"
+            android:text="@{viewModel.profile.callNumberText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/workHistory" />
@@ -72,7 +70,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.linkedInProfileText}"
+            android:text="@{viewModel.profile.linkedInProfileText}"
+            android:onClick="@{viewModel::onLinkedInProfileClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/call" />
@@ -82,7 +81,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.skypeCallText}"
+            android:text="@{viewModel.profile.skypeCallText}"
+            android:onClick="@{viewModel::onSkypeCallClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linkedIn" />
@@ -92,7 +92,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.sendMessageText}"
+            android:text="@{viewModel.profile.sendMessageText}"
+            android:onClick="@{viewModel::onSendMessageClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/skype" />
@@ -103,7 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/button_margin_bottom"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:text="@{profile.sendEmailText}"
+            android:text="@{viewModel.profile.sendEmailText}"
+            android:onClick="@{viewModel::onSendEmailClicked}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -13,7 +13,7 @@
     <string name="email_title">Job proposition</string>
     <string name="emailAddress">apawlicki@gmail.com</string>
     <string name="email_header">Hi Magdalena,\n</string>
-    <string name="email_footer">\n\n—\nYours sincerely,\n</string>
+    <string name="email_footer">\n\n-- \nYours sincerely,\n</string>
     <string name="linkedInId">adam-pawlicki-2393aa83</string>
     <string name="message_body">I have an offer for you. Please contact me: +48</string>
 </resources>

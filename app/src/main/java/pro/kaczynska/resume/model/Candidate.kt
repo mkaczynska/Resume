@@ -9,4 +9,5 @@ class Candidate {
     lateinit var linkedInId: String
     lateinit var skype: String
     lateinit var photo: Drawable
+    lateinit var photoDescription: String
 }

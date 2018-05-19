@@ -16,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Work History"
+        android:text="@string/workHistoryText"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,35 +51,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="a       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxth a       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                 hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                 hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
-                hsthfghxthsrth rsthsrth thfthchthxtfhxth"
+                android:text="@string/longtext"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/scrollView2"
                 app:layout_constraintStart_toStartOf="parent"

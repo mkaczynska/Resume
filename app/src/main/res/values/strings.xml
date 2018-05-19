@@ -1,19 +1,49 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Resume</string>
-    <string name="photo_description">Resume photo of Magdalena Kaczynska</string>
-    <string name="phone_button_title">Call Madzia</string>
-    <string name="linkedin_button_title">Show Madzia Profile</string>
-    <string name="skype_call">Skype call</string>
-    <string name="message_text">Send message</string>
-    <string name="email_button_title">Email Madzia</string>
-    <string name="history_button_title">Work History</string>
+    <string name="photoDescription">Resume photo of Magdalena Kaczynska</string>
+    <string name="phoneCallText">Call Madzia</string>
+    <string name="linkedInText">Show Madzia Profile</string>
+    <string name="skypeCallText">Skype call</string>
+    <string name="sendMessageText">Send message</string>
+    <string name="sendEmailText">Email Madzia</string>
+    <string name="workHistoryText">Work History</string>
     <string name="fullName">Magdalena Cecylia Kaczyńska</string>
     <string name="phoneNumber">tel:+48607437757</string>
     <string name="skypeName">bls.magdalena.kaczynska</string>
-    <string name="email_title">Job proposition</string>
+    <string name="emailTitle">Job proposition</string>
     <string name="emailAddress">apawlicki@gmail.com</string>
-    <string name="email_header">Hi Magdalena,\n</string>
-    <string name="email_footer">\n\n-- \nYours sincerely,\n</string>
+    <string name="emailHeader">Hi Magdalena,\n</string>
+    <string name="emailFooter" tools:ignore="TypographyDashes">\n\n-- \nYours sincerely,\n</string>
     <string name="linkedInId">adam-pawlicki-2393aa83</string>
-    <string name="message_body">I have an offer for you. Please contact me: +48</string>
+    <string name="messageBody">I have an offer for you. Please contact me</string>
+
+    <string name="longtext">hsthfghxthsrth rsthsrth thfthchthxtfhxth a       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                 hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                 hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxtha       gththhdfgshfhfdgdhdtsjstfhsfghsth hrthtr hsrths thrsthstthstrbfbcfgr
+                hsthfghxthsrth rsthsrth thfthchthxtfhxth"</string>
+
 </resources>

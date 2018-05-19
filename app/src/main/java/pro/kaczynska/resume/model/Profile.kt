@@ -7,5 +7,6 @@ class Profile {
     lateinit var skypeCallText: String
     lateinit var sendMessageText: String
     lateinit var sendEmailText: String
+    lateinit var messageBody: String
 }
 

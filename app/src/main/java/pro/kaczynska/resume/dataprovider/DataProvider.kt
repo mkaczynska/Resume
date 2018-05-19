@@ -21,41 +21,18 @@ class DataProvider(private val context: Context) : Provider {
         candidate.linkedInId = context.getString(R.string.linkedInId)
         candidate.skype = context.getString(R.string.skypeName)
         candidate.photo = context.getDrawable(R.drawable.madzia)
+        candidate.photoDescription = context.getString(R.string.photoDescription)
     }
 
     override fun provide(profile: Profile) {
-        profile.workHistoryText = context.getString(R.string.history_button_title)
-        profile.callNumberText = context.getString(R.string.phone_button_title)
-        profile.linkedInProfileText = context.getString(R.string.linkedin_button_title)
-        profile.skypeCallText = context.getString(R.string.skype_call)
-        profile.sendMessageText = context.getString(R.string.message_text)
-        profile.sendEmailText = context.getString(R.string.email_button_title)
+        profile.workHistoryText = context.getString(R.string.workHistoryText)
+        profile.callNumberText = context.getString(R.string.phoneCallText)
+        profile.linkedInProfileText = context.getString(R.string.linkedInText)
+        profile.skypeCallText = context.getString(R.string.skypeCallText)
+        profile.sendMessageText = context.getString(R.string.sendMessageText)
+        profile.sendEmailText = context.getString(R.string.sendEmailText)
+        profile.messageBody = context.getString(R.string.messageBody)
     }
 
 }
-
-//
-//class ResumeDataProvider(private val context: Context) : DataProvider {
-//
-//    override fun provideCandidateData(): Candidate {
-//        return Candidate(
-//                fullName = context.getString(R.string.fullName),
-//                phone = context.getString(R.string.phoneNumber),
-//                email = context.getString(R.string.emailAddress),
-//                linkedInId = context.getString(R.string.linkedInId),
-//                skype = context.getString(R.string.skypeName),
-//                photo = context.getDrawable(R.drawable.madzia))
-//    }
-//
-//    override fun provideProfileData(): Profile {
-//        return Profile(
-//                workHistoryText = context.getString(R.string.history_button_title),
-//                callNumberText = context.getString(R.string.phone_button_title),
-//                linkedInProfileText = context.getString(R.string.linkedin_button_title),
-//                skypeCallText = context.getString(R.string.skype_call),
-//                sendMessageText = context.getString(R.string.message_text),
-//                sendEmailText = context.getString(R.string.email_button_title))
-//    }
-//
-//}
 

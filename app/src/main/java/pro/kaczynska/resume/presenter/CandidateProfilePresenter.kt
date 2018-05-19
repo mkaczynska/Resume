@@ -46,14 +46,14 @@ class CandidateProfilePresenter(injectDagger: (CandidateProfilePresenter) -> Uni
     }
 
     fun onSendMessageClicked(profile: Profile) {
-        redirectOperation(intentRetriever.getComposeMessageIntent(profile.sendMessageText))
+        redirectOperation(intentRetriever.getComposeMessageIntent(profile.messageBody))
     }
 
     fun onSendEmailClicked(view: View, candidate: Candidate) {
         val context = view.context;
         val email = Email(candidate.email,
-                context.getString(R.string.email_title),
-                context.getString(R.string.email_header) + context.getString(R.string.email_footer))
+                context.getString(R.string.emailTitle),
+                context.getString(R.string.emailHeader) + context.getString(R.string.emailFooter))
         redirectOperation(intentRetriever.getComposeEmailIntent(email, context.packageManager))
     }
 }

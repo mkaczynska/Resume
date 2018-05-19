@@ -6,6 +6,10 @@
         <variable
             name="viewModel"
             type="pro.kaczynska.resume.viewmodel.CandidateProfileViewModel" />
+
+        <variable
+            name="presenter"
+            type="pro.kaczynska.resume.presenter.CandidateProfilePresenter" />
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -47,7 +51,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{viewModel::onWorkHistoryClicked}"
+            android:onClick="@{(view) -> presenter.onWorkHistoryClicked(view)}"
             android:text="@{viewModel.profile.workHistoryText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -59,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{viewModel::onCallNumberClicked}"
+            android:onClick="@{() -> presenter.onCallNumberClicked(viewModel.candidate)}"
             android:text="@{viewModel.profile.callNumberText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,8 +74,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
+            android:onClick="@{(view) -> presenter.onLinkedInProfileClicked(view, viewModel.candidate)}"
             android:text="@{viewModel.profile.linkedInProfileText}"
-            android:onClick="@{viewModel::onLinkedInProfileClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/call" />
@@ -81,8 +85,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
+            android:onClick="@{(view) -> presenter.onSkypeCallClicked(view, viewModel.candidate)}"
             android:text="@{viewModel.profile.skypeCallText}"
-            android:onClick="@{viewModel::onSkypeCallClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linkedIn" />
@@ -92,8 +96,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
+            android:onClick="@{() -> presenter.onSendMessageClicked(viewModel.profile)}"
             android:text="@{viewModel.profile.sendMessageText}"
-            android:onClick="@{viewModel::onSendMessageClicked}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/skype" />
@@ -104,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/button_margin_bottom"
             android:layout_marginTop="@dimen/button_margin_top"
+            android:onClick="@{(view) -> presenter.onSendEmailClicked(view, viewModel.candidate)}"
             android:text="@{viewModel.profile.sendEmailText}"
-            android:onClick="@{viewModel::onSendEmailClicked}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

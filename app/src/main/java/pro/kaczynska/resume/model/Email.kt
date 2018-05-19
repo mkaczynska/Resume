@@ -1,6 +1,5 @@
 package pro.kaczynska.resume.model
 
-class Email(  var address : String,
-              var subject : String,
-              var body : String) {
-}
+class Email(val address: String,
+            val subject: String,
+            val body: String)

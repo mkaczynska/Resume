@@ -7,7 +7,7 @@ import pro.kaczynska.resume.di.ResumeApplicationModule
 
 class ResumeApplication : Application() {
 
-   lateinit var component: ResumeApplicationComponent
+    lateinit var component: ResumeApplicationComponent
 
     override fun onCreate() {
         super.onCreate()

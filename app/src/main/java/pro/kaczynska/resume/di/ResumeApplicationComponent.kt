@@ -1,11 +1,11 @@
 package pro.kaczynska.resume.di
 
 import dagger.Component
-import pro.kaczynska.resume.viewmodel.CandidateProfileViewModel
+import pro.kaczynska.resume.presenter.CandidateProfilePresenter
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [(ResumeApplicationModule::class)])
 interface ResumeApplicationComponent {
-    fun inject(viewModel: CandidateProfileViewModel)
+    fun inject(presenter: CandidateProfilePresenter)
 }

@@ -1,4 +1,11 @@
 package pro.kaczynska.resume.model
 
-class Profile(val workHistoryText: String, val callNumberText: String, val linkedInProfileText: String, val skypeCallText: String, val sendMessageText: String, val sendEmailText: String)
+class Profile {
+    lateinit var workHistoryText: String
+    lateinit var callNumberText: String
+    lateinit var linkedInProfileText: String
+    lateinit var skypeCallText: String
+    lateinit var sendMessageText: String
+    lateinit var sendEmailText: String
+}
 

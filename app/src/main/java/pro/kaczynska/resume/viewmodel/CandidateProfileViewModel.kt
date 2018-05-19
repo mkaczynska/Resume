@@ -10,7 +10,8 @@ class CandidateProfileViewModel : ViewModel() {
     lateinit var candidate: Candidate
     lateinit var profile: Profile
 
-    fun createCandidate(provideCandidateData: () -> Candidate) = provideCandidateData()
-
-    fun createProfile(provideProfileData: () -> Profile) = provideProfileData()
+    fun init(provideCandidateData: () -> Candidate, provideProfileData: () -> Profile) {
+        candidate = provideCandidateData()
+        profile = provideProfileData()
+    }
 }

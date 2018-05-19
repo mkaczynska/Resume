@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity(), CandidateProfilePresenter.RedirectCall
         super.onCreate(savedInstanceState)
 
         val presenter = CandidateProfilePresenter(this, this)
-        setContentView(bindData(createViewModel(), presenter).root)
+        val viewModel = createViewModel()
+        bindData(viewModel, presenter)
     }
 
     override fun redirect(intent: Intent?) {
@@ -28,18 +29,17 @@ class MainActivity : AppCompatActivity(), CandidateProfilePresenter.RedirectCall
         }
     }
 
-    private fun bindData(viewModel: CandidateProfileViewModel, presenter: CandidateProfilePresenter): ActivityMainBinding {
+    private fun bindData(viewModel: CandidateProfileViewModel, presenter: CandidateProfilePresenter) {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         binding.viewModel = viewModel
         binding.presenter = presenter
         binding.setLifecycleOwner(this)
-        return binding
+        setContentView(binding.root)
     }
 
     private fun createViewModel(): CandidateProfileViewModel {
         val viewModel = ViewModelProviders.of(this).get(CandidateProfileViewModel::class.java)
-        viewModel.createCandidate(::provideCandidateData)
-        viewModel.createProfile(::provideProfileData)
+        viewModel.init(::provideCandidateData, ::provideProfileData)
         return viewModel
     }
 

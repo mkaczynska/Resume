@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import pro.kaczynska.resume.R
+import pro.kaczynska.resume.ResumeApplication
 import pro.kaczynska.resume.databinding.ActivityMainBinding
 import pro.kaczynska.resume.model.Candidate
 import pro.kaczynska.resume.model.Profile
@@ -12,21 +13,14 @@ import pro.kaczynska.resume.presenter.CandidateProfilePresenter
 import pro.kaczynska.resume.viewmodel.CandidateProfileViewModel
 
 
-class MainActivity : AppCompatActivity(), CandidateProfilePresenter.RedirectCallback {
-
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val presenter = CandidateProfilePresenter(this, this)
+        val presenter = createPresenter()
         val viewModel = createViewModel()
         bindData(viewModel, presenter)
-    }
-
-    override fun redirect(intent: Intent?) {
-        if (intent != null) {
-            startActivity(intent)
-        }
     }
 
     private fun bindData(viewModel: CandidateProfileViewModel, presenter: CandidateProfilePresenter) {
@@ -37,10 +31,21 @@ class MainActivity : AppCompatActivity(), CandidateProfilePresenter.RedirectCall
         setContentView(binding.root)
     }
 
+    private fun createPresenter(): CandidateProfilePresenter {
+        val injectDagger: (CandidateProfilePresenter) -> Unit = { presenter -> (application as ResumeApplication).component.inject(presenter) }
+        return CandidateProfilePresenter(injectDagger, ::redirect)
+    }
+
     private fun createViewModel(): CandidateProfileViewModel {
         val viewModel = ViewModelProviders.of(this).get(CandidateProfileViewModel::class.java)
         viewModel.init(::provideCandidateData, ::provideProfileData)
         return viewModel
+    }
+
+    private fun redirect(intent: Intent?) {
+        if (intent != null) {
+            startActivity(intent)
+        }
     }
 
     private fun provideCandidateData(): Candidate {

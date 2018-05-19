@@ -1,6 +1,5 @@
 package pro.kaczynska.resume.presenter
 
-import android.content.Context
 import android.content.Intent
 import android.databinding.BindingAdapter
 import android.graphics.drawable.Drawable
@@ -8,51 +7,46 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import pro.kaczynska.resume.R
-import pro.kaczynska.resume.ResumeApplication
 import pro.kaczynska.resume.manager.IntentRetriever
 import pro.kaczynska.resume.model.Candidate
 import pro.kaczynska.resume.model.Email
 import pro.kaczynska.resume.model.Profile
-import pro.kaczynska.resume.ui.MainActivity
 import javax.inject.Inject
 
 
-class CandidateProfilePresenter(context: Context, private val callback: RedirectCallback) {
+class CandidateProfilePresenter(injectDagger: (CandidateProfilePresenter) -> Unit, redirect: (Intent?) -> Unit) {
 
-
-    interface RedirectCallback {
-        fun redirect(intent: Intent?)
-    }
+    private val redirectOperation: (Intent?) -> Unit = redirect
 
     init {
-        val resumeApplication = (context as MainActivity).application as ResumeApplication
-        resumeApplication.component.inject(this)
+        injectDagger(this)
     }
+
 
     @Inject
     lateinit var intentRetriever: IntentRetriever
 
     fun onWorkHistoryClicked(view: View) {
         Toast.makeText(view.context, "Open Work History", Toast.LENGTH_LONG).show()
-        callback.redirect(intentRetriever.getWorkHistoryIntent(view.context))
+        redirectOperation(intentRetriever.getWorkHistoryIntent(view.context))
 
     }
 
     fun onCallNumberClicked(candidate: Candidate) {
-        callback.redirect(intentRetriever.getPhoneCallIntent(candidate.phone))
+        redirectOperation(intentRetriever.getPhoneCallIntent(candidate.phone))
     }
 
     fun onLinkedInProfileClicked(view: View, candidate: Candidate) {
-        callback.redirect(intentRetriever.getLinkedInProfileIntent(candidate.linkedInId,
+        redirectOperation(intentRetriever.getLinkedInProfileIntent(candidate.linkedInId,
                 view.context.packageManager))
     }
 
     fun onSkypeCallClicked(view: View, candidate: Candidate) {
-        callback.redirect(intentRetriever.getSkypeIntent(candidate.skype, view.context.packageManager))
+        redirectOperation(intentRetriever.getSkypeIntent(candidate.skype, view.context.packageManager))
     }
 
     fun onSendMessageClicked(profile: Profile) {
-        callback.redirect(intentRetriever.getComposeMessageIntent(profile.sendMessageText))
+        redirectOperation(intentRetriever.getComposeMessageIntent(profile.sendMessageText))
     }
 
     fun onSendEmailClicked(view: View, candidate: Candidate) {
@@ -60,7 +54,7 @@ class CandidateProfilePresenter(context: Context, private val callback: Redirect
         val email = Email(candidate.email,
                 context.getString(R.string.email_title),
                 context.getString(R.string.email_header) + context.getString(R.string.email_footer))
-        callback.redirect(intentRetriever.getComposeEmailIntent(email, context.packageManager))
+        redirectOperation(intentRetriever.getComposeEmailIntent(email, context.packageManager))
     }
 }
 

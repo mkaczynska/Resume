@@ -2,7 +2,6 @@
 <layout>
 
     <data>
-
         <variable
             name="viewModel"
             type="pro.kaczynska.resume.viewmodel.CandidateProfileViewModel" />
@@ -63,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{() -> presenter.onCallNumberClicked(viewModel.candidate)}"
+            android:onClick="@{(view) -> presenter.onCallNumberClicked(view, viewModel.candidate)}"
             android:text="@{viewModel.profile.callNumberText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,26 +80,26 @@
             app:layout_constraintTop_toBottomOf="@+id/call" />
 
         <Button
-            android:id="@+id/skype"
+            android:id="@+id/whatsapp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{(view) -> presenter.onSkypeCallClicked(view, viewModel.candidate)}"
-            android:text="@{viewModel.profile.skypeCallText}"
+            android:onClick="@{(view) -> presenter.onWhatsAppMessageClicked(view, viewModel.candidate)}"
+            android:text="@{viewModel.profile.whatsAppMessageText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linkedIn" />
 
         <Button
-            android:id="@+id/whatsapp"
+            android:id="@+id/sms"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{() -> presenter.onSendMessageClicked(viewModel.profile)}"
+            android:onClick="@{(view) -> presenter.onSendSMSClicked(view, viewModel.profile, viewModel.candidate)}"
             android:text="@{viewModel.profile.sendMessageText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/skype" />
+            app:layout_constraintTop_toBottomOf="@+id/whatsapp" />
 
         <Button
             android:id="@+id/sendEmail"
@@ -113,7 +112,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/whatsapp"
+            app:layout_constraintTop_toBottomOf="@+id/sms"
             app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>

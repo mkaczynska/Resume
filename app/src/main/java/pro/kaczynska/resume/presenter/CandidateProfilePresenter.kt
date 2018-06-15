@@ -32,8 +32,8 @@ class CandidateProfilePresenter(injectDagger: (CandidateProfilePresenter) -> Uni
 
     }
 
-    fun onCallNumberClicked(candidate: Candidate) {
-        redirectOperation(intentRetriever.getPhoneCallIntent(candidate.phone))
+    fun onCallNumberClicked(view: View, candidate: Candidate) {
+        redirectOperation(intentRetriever.getPhoneCallIntent(candidate.phone, view.context.packageManager))
     }
 
     fun onLinkedInProfileClicked(view: View, candidate: Candidate) {
@@ -41,16 +41,16 @@ class CandidateProfilePresenter(injectDagger: (CandidateProfilePresenter) -> Uni
                 view.context.packageManager))
     }
 
-    fun onSkypeCallClicked(view: View, candidate: Candidate) {
-        redirectOperation(intentRetriever.getSkypeIntent(candidate.skype, view.context.packageManager))
+    fun onWhatsAppMessageClicked(view: View, candidate: Candidate) {
+        redirectOperation(intentRetriever.getWhatsAppMessageIntent(candidate.phone, view.context.packageManager))
     }
 
-    fun onSendMessageClicked(profile: Profile) {
-        redirectOperation(intentRetriever.getComposeMessageIntent(profile.messageBody))
+    fun onSendSMSClicked(view: View, profile: Profile, candidate: Candidate) {
+        redirectOperation(intentRetriever.getComposeSMSIntent(profile.messageBody, candidate.phone, view.context.packageManager))
     }
 
     fun onSendEmailClicked(view: View, candidate: Candidate) {
-        val context = view.context;
+        val context = view.context
         val email = Email(candidate.email,
                 context.getString(R.string.emailTitle),
                 context.getString(R.string.emailHeader) + context.getString(R.string.emailFooter))

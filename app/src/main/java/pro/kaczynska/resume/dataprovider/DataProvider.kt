@@ -28,7 +28,7 @@ class DataProvider(private val context: Context) : Provider {
         profile.workHistoryText = context.getString(R.string.workHistoryText)
         profile.callNumberText = context.getString(R.string.phoneCallText)
         profile.linkedInProfileText = context.getString(R.string.linkedInText)
-        profile.skypeCallText = context.getString(R.string.skypeCallText)
+        profile.whatsAppMessageText = context.getString(R.string.sendWhatsAppMessageText)
         profile.sendMessageText = context.getString(R.string.sendMessageText)
         profile.sendEmailText = context.getString(R.string.sendEmailText)
         profile.messageBody = context.getString(R.string.messageBody)

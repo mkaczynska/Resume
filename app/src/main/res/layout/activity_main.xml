@@ -2,6 +2,7 @@
 <layout>
 
     <data>
+
         <variable
             name="viewModel"
             type="pro.kaczynska.resume.viewmodel.CandidateProfileViewModel" />
@@ -46,27 +47,16 @@
             app:srcCompat="@{viewModel.candidate.photo}" />
 
         <Button
-            android:id="@+id/workHistory"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{(view) -> presenter.onWorkHistoryClicked(view)}"
-            android:text="@{viewModel.profile.workHistoryText}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-        <Button
             android:id="@+id/call"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{(view) -> presenter.onCallNumberClicked(view, viewModel.candidate)}"
+            android:onClick="@{() -> presenter.onCallNumberClicked(viewModel.candidate)}"
             android:text="@{viewModel.profile.callNumberText}"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workHistory" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <Button
             android:id="@+id/linkedIn"
@@ -95,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top"
-            android:onClick="@{(view) -> presenter.onSendSMSClicked(view, viewModel.profile, viewModel.candidate)}"
+            android:onClick="@{() -> presenter.onSendSMSClicked(viewModel.profile, viewModel.candidate)}"
             android:text="@{viewModel.profile.sendMessageText}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

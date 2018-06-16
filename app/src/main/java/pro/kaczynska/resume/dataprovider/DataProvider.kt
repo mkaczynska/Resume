@@ -19,13 +19,11 @@ class DataProvider(private val context: Context) : Provider {
         candidate.phone = context.getString(R.string.phoneNumber)
         candidate.email = context.getString(R.string.emailAddress)
         candidate.linkedInId = context.getString(R.string.linkedInId)
-        candidate.skype = context.getString(R.string.skypeName)
         candidate.photo = context.getDrawable(R.drawable.madzia)
         candidate.photoDescription = context.getString(R.string.photoDescription)
     }
 
     override fun provide(profile: Profile) {
-        profile.workHistoryText = context.getString(R.string.workHistoryText)
         profile.callNumberText = context.getString(R.string.phoneCallText)
         profile.linkedInProfileText = context.getString(R.string.linkedInText)
         profile.whatsAppMessageText = context.getString(R.string.sendWhatsAppMessageText)

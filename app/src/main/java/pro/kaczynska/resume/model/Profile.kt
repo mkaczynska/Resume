@@ -1,7 +1,6 @@
 package pro.kaczynska.resume.model
 
 class Profile {
-    lateinit var workHistoryText: String
     lateinit var callNumberText: String
     lateinit var linkedInProfileText: String
     lateinit var whatsAppMessageText: String

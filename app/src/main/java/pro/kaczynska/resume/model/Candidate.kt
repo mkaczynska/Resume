@@ -7,7 +7,6 @@ class Candidate {
     lateinit var phone: String
     lateinit var email: String
     lateinit var linkedInId: String
-    lateinit var skype: String
     lateinit var photo: Drawable
     lateinit var photoDescription: String
 }
